@@ -27,7 +27,11 @@ const userSchema= new Schema({
         type:mongoose.Types.ObjectId,
         ref:"Transaction",
         default:[]
-    }]
+    }],
+    access:{
+        type:Boolean,
+        default:true
+    }
 })
 
 export default mongoose.model("User",userSchema)

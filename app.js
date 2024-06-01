@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors"
 import userRoute from "./routes/userRoute.js";
-
+import adminRoute from "./routes/adminRoute.js"
 dotenv.config();
 
 const app = express();
@@ -31,4 +31,5 @@ mongoose.connect("mongodb://127.0.0.1/jithBank", {
 
 // Routes
 app.use("/api/user", userRoute);
+app.use("/api/admin", adminRoute);
 
